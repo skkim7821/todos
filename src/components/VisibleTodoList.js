@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import * as actions from '../actions';
@@ -31,6 +31,12 @@ class VisibleTodoList extends Component {
     );
   }
 }
+
+VisibleTodoList.propTypes = {
+  filter: PropTypes.oneOf(['all', 'active', 'completed']).isRequired,
+  fetchTodos: PropTypes.func.isRequired,
+  toggleTodo: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = (state, { params }) => {
   const filter = params.filter || 'all';

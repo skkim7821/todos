@@ -1,4 +1,4 @@
-import React, { PropType } from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
 const FilterLink = ({ filter, children }) => (
@@ -14,8 +14,8 @@ const FilterLink = ({ filter, children }) => (
 );
 
 FilterLink.propTypes = {
-  filter: PropType.string.isRequired,
-  children: PropType.element.isRequired,
+  filter: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
 };
 
 export default FilterLink;

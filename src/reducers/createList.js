@@ -31,7 +31,7 @@ const createList = (filter) => {
   };
 
   const isFetching = (state = false, action) => {
-    if (action.filter !== filter) {
+    if (filter !== action.filter) {
       return state;
     }
     switch (action.type) {
@@ -49,7 +49,6 @@ const createList = (filter) => {
     if (filter !== action.filter) {
       return state;
     }
-
     switch (action.type) {
       case 'FETCH_TODOS_FAILURE':
         return action.message;

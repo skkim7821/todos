@@ -31,7 +31,6 @@ export const fetchTodos = (filter) => (dispatch, getState) => {
   );
 };
 
-
 export const addTodo = (text) => (dispatch) =>
   api.addTodo(text).then(response => {
     dispatch({
